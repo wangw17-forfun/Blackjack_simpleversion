@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Royal Blackjack – project scope, design documentation, and development roadmap." />
+  <title>Royal Blackjack | About &amp; Documentation</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header role="banner">
+    <nav role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+        <span class="logo-symbol">♠</span>
+        <span class="logo-text">Royal Blackjack</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Play Now</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-main">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-labelledby="about-title">
+      <h1 id="about-title">About &amp; Project Documentation</h1>
+      <p class="page-hero-sub">Scope, design, and development plan for Royal Blackjack.</p>
+    </section>
+
+    <!-- ===== PROJECT OVERVIEW ===== -->
+    <section class="doc-section" aria-labelledby="overview-title">
+      <h2 id="overview-title">Project Overview</h2>
+      <p>
+        <strong>Royal Blackjack</strong> is an interactive browser-based card game
+        built as a progressive web development project across five weeks. The application
+        recreates the classic casino game of <em>Blackjack (21)</em>, allowing a single
+        player to compete against an automated dealer.
+      </p>
+      <p>
+        The project is developed incrementally, starting with semantic HTML5 structure
+        (Weeks 1–2), styled with CSS3 (Weeks 2–3), and brought to life with JavaScript
+        game logic (Weeks 4–5).
+      </p>
+    </section>
+
+    <!-- ===== PROJECT SCOPE ===== -->
+    <section class="doc-section" aria-labelledby="scope-title">
+      <h2 id="scope-title">Project Scope</h2>
+
+      <h3>In Scope</h3>
+      <ul class="scope-list in">
+        <li>Four interconnected HTML pages (Home, Game, Rules, About)</li>
+        <li>Full Blackjack game logic (Hit, Stand, Double Down)</li>
+        <li>Animated card dealing and score calculation</li>
+        <li>Chip-based betting system with running balance</li>
+        <li>Round history log table</li>
+        <li>Responsive design for desktop, tablet, and mobile</li>
+        <li>Accessibility: ARIA roles, keyboard navigation, semantic HTML</li>
+      </ul>
+
+      <h3>Out of Scope</h3>
+      <ul class="scope-list out">
+        <li>Real-money transactions or cryptocurrency</li>
+        <li>Multiplayer / server-side networking</li>
+        <li>User account creation or persistent database storage</li>
+        <li>Card splitting (may be added as a stretch goal)</li>
+        <li>Mobile app packaging (PWA manifest optional stretch goal)</li>
+      </ul>
+
+      <h3>Stretch Goals</h3>
+      <ul class="scope-list stretch">
+        <li>Split pairs action</li>
+        <li>LocalStorage-based high score persistence</li>
+        <li>Card flip CSS animations</li>
+        <li>Sound effects (deal, win, bust)</li>
+      </ul>
+    </section>
+
+    <!-- ===== DESIGN DOCUMENT ===== -->
+    <section class="doc-section" aria-labelledby="design-title">
+      <h2 id="design-title">Design Document</h2>
+
+      <h3>Visual Direction</h3>
+      <p>
+        The aesthetic is <strong>luxury casino noir</strong> — deep green felt table,
+        gold accents, and crisp white card faces reminiscent of physical playing cards.
+        The palette deliberately avoids generic tech-startup blues in favour of the
+        tactile materials of a real card table.
+      </p>
+
+      <h3>Colour Palette</h3>
+      <table aria-label="Design colour palette">
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Name</th>
+            <th scope="col">Hex</th>
+            <th scope="col">Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch" style="background:#0d2b1e;"></span></td>
+            <td>Deep Felt</td>
+            <td><code>#0d2b1e</code></td>
+            <td>Page background, nav</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#1a5c3a;"></span></td>
+            <td>Table Green</td>
+            <td><code>#1a5c3a</code></td>
+            <td>Game table surface</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#c9a84c;"></span></td>
+            <td>Casino Gold</td>
+            <td><code>#c9a84c</code></td>
+            <td>Accents, borders, highlights</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#f5f0e8;"></span></td>
+            <td>Card Ivory</td>
+            <td><code>#f5f0e8</code></td>
+            <td>Card faces, body text on dark</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#c0392b;"></span></td>
+            <td>Heart Red</td>
+            <td><code>#c0392b</code></td>
+            <td>Hearts ♥ and Diamonds ♦</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#1a1a2e;"></span></td>
+            <td>Void Black</td>
+            <td><code>#1a1a2e</code></td>
+            <td>Card backs, deep shadows</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Typography</h3>
+      <dl class="type-list">
+        <dt>Display / Headings</dt>
+        <dd><em>Georgia</em> serif — evokes the gravitas of a casino name plate. Used for
+        the logo and major headings with tracked letter-spacing.</dd>
+        <dt>Body</dt>
+        <dd><em>System UI</em> sans-serif stack — legible and fast-loading at all sizes.</dd>
+        <dt>Card Numerals</dt>
+        <dd><em>Courier New</em> monospace — simulates the fixed-width feel of printed playing cards.</dd>
+      </dl>
+
+      <h3>Page Layout Summary</h3>
+      <figure>
+        <pre class="wireframe" aria-label="ASCII wireframe of the game page layout">
+┌─────────────────────────────────────────┐
+│  ♠ Royal Blackjack   Home Play Rules …  │  ← Header / Nav
+├─────────────────────────────────────────┤
+│  Balance $1,000  │  Bet $50  │  Round 3 │  ← Status Bar
+├─────────────────────────────────────────┤
+│                                         │
+│        [ DEALER'S HAND  ]               │  ← Dealer Zone
+│    [Card Back]  [A♠]    Score: ?        │
+│                                         │
+│     ─ ─ ─ ─ YOU WIN! ─ ─ ─ ─           │  ← Result Banner
+│                                         │
+│        [ YOUR HAND ]                    │  ← Player Zone
+│    [A♥]  [K♣]           Score: 21       │
+│                                         │
+├───────────────────────┬─────────────────┤
+│  +$10 +$25 +$50 +$100 │  Deal Hit Stand │  ← Controls
+└───────────────────────┴─────────────────┘
+        </pre>
+        <figcaption>ASCII wireframe of the main game table layout (game.html)</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== DEVELOPMENT ROADMAP ===== -->
+    <section class="doc-section" aria-labelledby="roadmap-title">
+      <h2 id="roadmap-title">Development Roadmap</h2>
+      <table aria-label="Project development roadmap by week">
+        <thead>
+          <tr>
+            <th scope="col">Week</th>
+            <th scope="col">Focus</th>
+            <th scope="col">Deliverables</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="current-week">
+            <td>1 – 2</td>
+            <td>HTML5</td>
+            <td>4 semantic pages, all structural tags, ARIA roles, tables, forms layout</td>
+            <td><span class="badge win">In Progress</span></td>
+          </tr>
+          <tr>
+            <td>2 – 3</td>
+            <td>CSS3</td>
+            <td>Casino theme, card styles, responsive grid, hover effects, transitions</td>
+            <td><span class="badge pending">Upcoming</span></td>
+          </tr>
+          <tr>
+            <td>4 – 5</td>
+            <td>JavaScript</td>
+            <td>Deck generation, shuffle, dealing, scoring, AI dealer, bet logic, history log</td>
+            <td><span class="badge pending">Upcoming</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== HTML5 TAGS USED ===== -->
+    <section class="doc-section" aria-labelledby="tags-title">
+      <h2 id="tags-title">HTML5 Tags Used (Week 1)</h2>
+      <p>The following HTML5 semantic and structural tags are used across the project pages:</p>
+      <div class="tag-cloud" aria-label="HTML tags used in this project">
+        <code>&lt;!DOCTYPE html&gt;</code>
+        <code>&lt;html lang&gt;</code>
+        <code>&lt;head&gt;</code>
+        <code>&lt;meta charset&gt;</code>
+        <code>&lt;meta name="viewport"&gt;</code>
+        <code>&lt;meta name="description"&gt;</code>
+        <code>&lt;meta name="keywords"&gt;</code>
+        <code>&lt;title&gt;</code>
+        <code>&lt;link rel="stylesheet"&gt;</code>
+        <code>&lt;body&gt;</code>
+        <code>&lt;header&gt;</code>
+        <code>&lt;nav&gt;</code>
+        <code>&lt;ul&gt; / &lt;li&gt;</code>
+        <code>&lt;a&gt;</code>
+        <code>&lt;main&gt;</code>
+        <code>&lt;section&gt;</code>
+        <code>&lt;article&gt;</code>
+        <code>&lt;aside&gt;</code>
+        <code>&lt;h1&gt;–&lt;h6&gt;</code>
+        <code>&lt;p&gt;</code>
+        <code>&lt;strong&gt; / &lt;em&gt;</code>
+        <code>&lt;blockquote&gt;</code>
+        <code>&lt;figure&gt; / &lt;figcaption&gt;</code>
+        <code>&lt;table&gt;</code>
+        <code>&lt;thead&gt; / &lt;tbody&gt;</code>
+        <code>&lt;tr&gt; / &lt;th&gt; / &lt;td&gt;</code>
+        <code>&lt;dl&gt; / &lt;dt&gt; / &lt;dd&gt;</code>
+        <code>&lt;ol&gt; / &lt;ul&gt;</code>
+        <code>&lt;div&gt; / &lt;span&gt;</code>
+        <code>&lt;button&gt;</code>
+        <code>&lt;pre&gt;</code>
+        <code>&lt;code&gt;</code>
+        <code>&lt;footer&gt;</code>
+        <code>&lt;small&gt;</code>
+        <code>aria-label</code>
+        <code>aria-live</code>
+        <code>role=</code>
+        <code>hidden</code>
+        <code>data-*</code>
+        <code>&lt;script defer&gt;</code>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT THE STUDENT ===== -->
+    <section class="doc-section" aria-labelledby="student-title">
+      <h2 id="student-title">About This Project</h2>
+      <address>
+        <p>
+          <strong>Course:</strong> Web Development – Individual Project<br />
+          <strong>Project:</strong> Royal Blackjack – Browser-based 21 Card Game<br />
+          <strong>Stage:</strong> Week 1 Submission – HTML5 Structure &amp; Documentation<br />
+          <strong>Technologies:</strong> HTML5, CSS3 (upcoming), JavaScript (upcoming)
+        </p>
+      </address>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-logo"><span>♠</span> Royal Blackjack</p>
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Play</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Royal Blackjack &mdash; Web Development Project, Week 1</p>
+    </div>
+  </footer>
+
+</body>
+</html>

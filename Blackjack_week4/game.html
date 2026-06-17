@@ -34,7 +34,7 @@
   </header>
 
   <main>
-    <!-- ===== GAME TABLE (Week 3: CSS Grid Template Areas) ===== -->
+    <!-- ===== GAME TABLE ===== -->
     <section class="game-table" aria-label="Blackjack Game Table">
 
       <!-- Status Bar -->
@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <!-- Game Grid (Week 3: grid-template-areas) -->
+      <!-- Game Grid -->
       <div class="game-grid">
 
         <!-- Dealer Zone -->
@@ -77,7 +77,7 @@
         <div class="player-zone player-zone-main" style="grid-area: player;">
           <div class="card-row" id="player-cards" role="list" aria-label="Player cards">
           </div>
-          <div class="score-badge" id="player-score" aria-label="Player score">21</div>
+          <div class="score-badge" id="player-score" aria-label="Player score">0</div>
           <h2 class="zone-label">Your Hand</h2>
         </div>
 
@@ -115,20 +115,6 @@
           </tr>
         </thead>
         <tbody id="history-body">
-          <tr>
-            <td>1</td>
-            <td>A ♠ + K ♥ = 21</td>
-            <td>7 ♦ + Q ♣ = 17</td>
-            <td><span class="badge win">Blackjack!</span></td>
-            <td class="positive">+$150</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>6 ♣ + 9 ♠ + 8 ♦ = 23</td>
-            <td>K ♠ + 7 ♥ = 17</td>
-            <td><span class="badge bust">Bust</span></td>
-            <td class="negative">-$50</td>
-          </tr>
         </tbody>
       </table>
     </section>
@@ -151,7 +137,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
-  <script src="js/game.js" defer></script>
   <script src="js/game.js" defer></script>
 </body>
 </html>

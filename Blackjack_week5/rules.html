@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn the full rules of Royal Blackjack – how to play, card values, and winning conditions." />
+  <title>Royal Blackjack | Rules</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header role="banner">
+    <nav role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+        <span class="logo-symbol">♠</span>
+        <span class="logo-text">Royal Blackjack</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Play Now</a></li>
+        <li><a href="rules.html" class="active" aria-current="page">Rules</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="rules-main">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-labelledby="rules-title">
+      <h1 id="rules-title">Game Rules</h1>
+      <p class="page-hero-sub">Everything you need to know to beat the dealer.</p>
+    </section>
+
+    <!-- ===== OBJECTIVE ===== -->
+    <section class="rules-section reveal" aria-labelledby="objective-title">
+      <h2 id="objective-title">Objective</h2>
+      <p>
+        The goal of Blackjack is to beat the dealer by having a hand total closer to
+        <strong>21</strong> than the dealer, without going over 21 (called a <em>Bust</em>).
+        You are only competing against the dealer — not other players.
+      </p>
+      <blockquote cite="https://en.wikipedia.org/wiki/Blackjack">
+        <p>"Getting closer to 21 than the dealer, without exceeding it, is the single goal
+        of every hand."</p>
+        <footer>— Classic Casino Rule</footer>
+      </blockquote>
+    </section>
+
+    <!-- ===== CARD VALUES ===== -->
+    <section class="rules-section reveal" aria-labelledby="values-title">
+      <h2 id="values-title">Card Values</h2>
+      <table aria-label="Blackjack card value reference">
+        <thead>
+          <tr>
+            <th scope="col">Card</th>
+            <th scope="col">Value</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 – 9</td>
+            <td>Face Value</td>
+            <td>A 7 is worth 7 points.</td>
+          </tr>
+          <tr>
+            <td>10, J, Q, K</td>
+            <td>10 Points</td>
+            <td>All picture cards are worth 10.</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>A (Ace)</td>
+            <td>1 or 11 Points</td>
+            <td>Counts as 11 unless it causes a Bust; then counts as 1.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-legend" aria-label="Card value examples">
+        <figure class="legend-item">
+          <div class="card card-face red mini">
+            <span class="card-rank">A</span>
+            <span class="card-suit">♥</span>
+            <span class="card-rank bottom">A</span>
+          </div>
+          <figcaption>Ace = 1 or 11</figcaption>
+        </figure>
+        <figure class="legend-item">
+          <div class="card card-face mini">
+            <span class="card-rank">K</span>
+            <span class="card-suit">♠</span>
+            <span class="card-rank bottom">K</span>
+          </div>
+          <figcaption>King = 10</figcaption>
+        </figure>
+        <figure class="legend-item">
+          <div class="card card-face red mini">
+            <span class="card-rank">7</span>
+            <span class="card-suit">♦</span>
+            <span class="card-rank bottom">7</span>
+          </div>
+          <figcaption>Seven = 7</figcaption>
+        </figure>
+        <figure class="legend-item">
+          <div class="card card-face mini">
+            <span class="card-rank">2</span>
+            <span class="card-suit">♣</span>
+            <span class="card-rank bottom">2</span>
+          </div>
+          <figcaption>Two = 2</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== HOW TO PLAY ===== -->
+    <section class="rules-section reveal" aria-labelledby="gameplay-title">
+      <h2 id="gameplay-title">How a Round Plays</h2>
+      <ol class="rules-steps">
+        <li>
+          <h3>Place Your Bet</h3>
+          <p>Before cards are dealt, choose your wager from the chip buttons on the game table.</p>
+        </li>
+        <li>
+          <h3>Initial Deal</h3>
+          <p>Both you and the dealer receive two cards. Your cards are face-up.
+          The dealer shows one card face-up and keeps one face-down (the <em>hole card</em>).</p>
+        </li>
+        <li>
+          <h3>Player Actions</h3>
+          <p>You choose an action on your turn (see the actions table below).</p>
+        </li>
+        <li>
+          <h3>Dealer's Turn</h3>
+          <p>After you Stand, the dealer flips the hole card. The dealer <strong>must</strong>
+          draw cards until reaching a total of 17 or higher.</p>
+        </li>
+        <li>
+          <h3>Determine the Winner</h3>
+          <p>Compare totals. Closest to 21 wins. Bust = automatic loss.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== ACTIONS ===== -->
+    <section class="rules-section reveal" aria-labelledby="actions-title">
+      <h2 id="actions-title">Player Actions</h2>
+      <div class="actions-grid">
+        <article class="action-card">
+          <h3 class="action-name hit">Hit</h3>
+          <p>Draw one more card from the deck. You may Hit as many times as you like,
+          but if your total exceeds 21 you Bust and lose the round.</p>
+        </article>
+        <article class="action-card">
+          <h3 class="action-name stand">Stand</h3>
+          <p>Keep your current hand and end your turn. The dealer then plays out their hand.</p>
+        </article>
+        <article class="action-card">
+          <h3 class="action-name double">Double Down</h3>
+          <p>Double your original bet and receive exactly <em>one</em> more card, then
+          automatically Stand. Only available on your first two cards.</p>
+        </article>
+        <article class="action-card">
+          <h3 class="action-name blackjack">Blackjack!</h3>
+          <p>If your first two cards total 21 (an Ace + a 10-value card), that's Blackjack.
+          You win 1.5× your bet automatically, unless the dealer also has Blackjack (Push).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== WIN / LOSE CONDITIONS ===== -->
+    <section class="rules-section reveal" aria-labelledby="win-title">
+      <h2 id="win-title">Win, Lose &amp; Push</h2>
+      <dl class="outcomes-list">
+        <dt class="win">You Win</dt>
+        <dd>Your total is closer to 21 than the dealer's without busting. Payout is 1:1 (even money).</dd>
+        <dt class="win">Blackjack Win</dt>
+        <dd>Your first two cards equal 21 and the dealer does not have Blackjack. Payout is 3:2 (you win 1.5× your bet).</dd>
+        <dt class="lose">You Lose</dt>
+        <dd>You Bust (total &gt; 21), or the dealer's total is higher than yours without busting.</dd>
+        <dt class="push">Push (Tie)</dt>
+        <dd>You and the dealer have the same total. Your bet is returned — no win, no loss.</dd>
+      </dl>
+    </section>
+
+    <!-- ===== QUICK REFERENCE ===== -->
+    <aside class="rules-aside reveal" aria-labelledby="quickref-title">
+      <h2 id="quickref-title">Quick Reference</h2>
+      <ul>
+        <li>Dealer must hit on 16, stand on 17+</li>
+        <li>Bust = total over 21 = instant loss</li>
+        <li>Blackjack pays 3:2 (1.5×)</li>
+        <li>Push returns your bet</li>
+        <li>Ace counts as 11 until it causes a bust, then 1</li>
+      </ul>
+      <a href="game.html" class="btn btn-primary">Start Playing →</a>
+    </aside>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-logo"><span>♠</span> Royal Blackjack</p>
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Play</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Royal Blackjack &mdash; Web Development Project, Week 1–5</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

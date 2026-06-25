@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Royal Blackjack – project scope, design documentation, and development roadmap." />
+  <title>Royal Blackjack | About &amp; Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header role="banner">
+    <nav role="navigation" aria-label="Main Navigation">
+      <div class="logo">
+        <span class="logo-symbol">♠</span>
+        <span class="logo-text">Royal Blackjack</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Play Now</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-main">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero" aria-labelledby="about-title">
+      <h1 id="about-title">About &amp; Project Documentation</h1>
+      <p class="page-hero-sub">Scope, design, and development plan for Royal Blackjack.</p>
+    </section>
+
+    <!-- ===== PROJECT OVERVIEW ===== -->
+    <section class="doc-section reveal" aria-labelledby="overview-title">
+      <h2 id="overview-title">Project Overview</h2>
+      <p>
+        <strong>Royal Blackjack</strong> is an interactive browser-based card game
+        built as a progressive web development project across five weeks. The application
+        recreates the classic casino game of <em>Blackjack (21)</em>, allowing a single
+        player to compete against an automated dealer.
+      </p>
+      <p>
+        The project is developed incrementally, starting with semantic HTML5 structure
+        (Weeks 1–2), styled with CSS3 (Weeks 2–3), and brought to life with JavaScript
+        game logic (Weeks 4–5).
+      </p>
+    </section>
+
+    <!-- ===== PROJECT SCOPE ===== -->
+    <section class="doc-section reveal" aria-labelledby="scope-title">
+      <h2 id="scope-title">Project Scope</h2>
+      <h3>In Scope</h3>
+      <ul class="scope-list in">
+        <li>Four interconnected HTML pages (Home, Game, Rules, About)</li>
+        <li>Full Blackjack game logic (Hit, Stand, Double Down)</li>
+        <li>Animated card dealing and score calculation</li>
+        <li>Chip-based betting system with running balance</li>
+        <li>Round history log table</li>
+        <li>Responsive design for desktop, tablet, and mobile</li>
+        <li>Accessibility: ARIA roles, keyboard navigation, semantic HTML</li>
+      </ul>
+      <h3>Out of Scope</h3>
+      <ul class="scope-list out">
+        <li>Real-money transactions or cryptocurrency</li>
+        <li>Multiplayer / server-side networking</li>
+        <li>User account creation or persistent database storage</li>
+        <li>Card splitting (may be added as a stretch goal)</li>
+        <li>Mobile app packaging (PWA manifest optional stretch goal)</li>
+      </ul>
+      <h3>Stretch Goals</h3>
+      <ul class="scope-list stretch">
+        <li>Split pairs action</li>
+        <li>LocalStorage-based high score persistence ✅ Completed Week 5</li>
+        <li>Card flip CSS animations ✅ Completed Week 3</li>
+        <li>Sound effects (deal, win, bust)</li>
+      </ul>
+    </section>
+
+    <!-- ===== DESIGN DOCUMENT ===== -->
+    <section class="doc-section reveal" aria-labelledby="design-title">
+      <h2 id="design-title">Design Document</h2>
+      <h3>Visual Direction</h3>
+      <p>
+        The aesthetic is <strong>Modern Dark + Neon Glow</strong> — deep void black background,
+        neon cyan/magenta/gold accents, and crisp white card faces with glow effects.
+        The design language draws from underground casino culture meets cyberpunk, using
+        CSS3 animations to bring the interface to life.
+      </p>
+      <h3>Colour Palette</h3>
+      <table aria-label="Design colour palette">
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Name</th>
+            <th scope="col">Hex</th>
+            <th scope="col">Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="swatch" style="background:#080c10;"></span></td>
+            <td>Void Black</td>
+            <td><code>#080c10</code></td>
+            <td>Page background</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#00e5ff;"></span></td>
+            <td>Neon Cyan</td>
+            <td><code>#00e5ff</code></td>
+            <td>Primary accent, dealer zone</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#ff2d78;"></span></td>
+            <td>Neon Magenta</td>
+            <td><code>#ff2d78</code></td>
+            <td>Player zone, Stand button</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#ffd447;"></span></td>
+            <td>Neon Gold</td>
+            <td><code>#ffd447</code></td>
+            <td>Result banner, win state</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#39ff6e;"></span></td>
+            <td>Neon Green</td>
+            <td><code>#39ff6e</code></td>
+            <td>Hit button, win badges</td>
+          </tr>
+          <tr>
+            <td><span class="swatch" style="background:#f0f4f8;"></span></td>
+            <td>Card Ivory</td>
+            <td><code>#f0f4f8</code></td>
+            <td>Card face background</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Page Layout Summary</h3>
+      <figure>
+        <pre class="wireframe" aria-label="ASCII wireframe of the game page layout">
+┌─────────────────────────────────────────┐
+│  ♠ Royal Blackjack   Home Play Rules …  │  ← Header / Nav (sticky)
+├─────────────────────────────────────────┤
+│  Balance $1,000  │  Bet $50  │  Round 3 │  ← Status Bar
+├─────────────────────────────────────────┤
+│  ╔═══════════════════════════════════╗  │
+│  ║      [ DEALER'S HAND — cyan ]    ║  │  ← grid-area: dealer
+│  ╚═══════════════════════════════════╝  │
+│         ─ ─ ─ YOU WIN! ─ ─ ─           │  ← grid-area: result
+│  ╔═══════════════════════════════════╗  │
+│  ║      [ YOUR HAND — magenta ]     ║  │  ← grid-area: player
+│  ╚═══════════════════════════════════╝  │
+│  +$10 +$25 +$50  │  Deal  Hit  Stand   │  ← grid-area: actions
+└─────────────────────────────────────────┘
+        </pre>
+        <figcaption>Week 3: game table uses CSS Grid Template Areas for precise layout control</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== DEVELOPMENT ROADMAP ===== -->
+    <section class="doc-section reveal" aria-labelledby="roadmap-title">
+      <h2 id="roadmap-title">Development Roadmap</h2>
+      <table aria-label="Project development roadmap by week">
+        <thead>
+          <tr>
+            <th scope="col">Week</th>
+            <th scope="col">Focus</th>
+            <th scope="col">Deliverables</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 – 2</td>
+            <td>HTML5</td>
+            <td>4 semantic pages, structural tags, ARIA roles, tables, forms layout</td>
+            <td><span class="badge win">Complete</span></td>
+          </tr>
+          <tr>
+            <td>2 – 3</td>
+            <td>CSS3</td>
+            <td>Neon theme, card 3D flip, hamburger nav, scroll reveal, grid-template-areas, responsive</td>
+            <td><span class="badge win">Complete</span></td>
+          </tr>
+          <tr class="current-week">
+            <td>4 – 5</td>
+            <td>JavaScript</td>
+            <td>Deck generation, Fisher-Yates shuffle, dealing, Ace scoring, dealer AI, bet logic, win/lose/push/blackjack detection, history log, keyboard shortcuts, bug fixes, LocalStorage high score</td>
+            <td><span class="badge win">Complete</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== HTML5 TAGS USED ===== -->
+    <section class="doc-section reveal" aria-labelledby="tags-title">
+      <h2 id="tags-title">HTML5 Tags Used (Week 1–2)</h2>
+      <p>Semantic and structural tags used across all pages:</p>
+      <div class="tag-cloud" aria-label="HTML tags used in this project">
+        <code>&lt;!DOCTYPE html&gt;</code>
+        <code>&lt;html lang&gt;</code>
+        <code>&lt;head&gt;</code>
+        <code>&lt;meta charset&gt;</code>
+        <code>&lt;meta name="viewport"&gt;</code>
+        <code>&lt;meta name="description"&gt;</code>
+        <code>&lt;meta name="keywords"&gt;</code>
+        <code>&lt;title&gt;</code>
+        <code>&lt;link rel="stylesheet"&gt;</code>
+        <code>&lt;body&gt;</code>
+        <code>&lt;header&gt;</code>
+        <code>&lt;nav&gt;</code>
+        <code>&lt;ul&gt; / &lt;li&gt;</code>
+        <code>&lt;a&gt;</code>
+        <code>&lt;main&gt;</code>
+        <code>&lt;section&gt;</code>
+        <code>&lt;article&gt;</code>
+        <code>&lt;aside&gt;</code>
+        <code>&lt;h1&gt;–&lt;h6&gt;</code>
+        <code>&lt;p&gt;</code>
+        <code>&lt;strong&gt; / &lt;em&gt;</code>
+        <code>&lt;blockquote&gt;</code>
+        <code>&lt;figure&gt; / &lt;figcaption&gt;</code>
+        <code>&lt;table&gt;</code>
+        <code>&lt;thead&gt; / &lt;tbody&gt;</code>
+        <code>&lt;tr&gt; / &lt;th&gt; / &lt;td&gt;</code>
+        <code>&lt;dl&gt; / &lt;dt&gt; / &lt;dd&gt;</code>
+        <code>&lt;ol&gt; / &lt;ul&gt;</code>
+        <code>&lt;div&gt; / &lt;span&gt;</code>
+        <code>&lt;button&gt;</code>
+        <code>&lt;pre&gt;</code>
+        <code>&lt;code&gt;</code>
+        <code>&lt;footer&gt;</code>
+        <code>&lt;small&gt;</code>
+        <code>&lt;address&gt;</code>
+        <code>aria-label</code>
+        <code>aria-live</code>
+        <code>aria-expanded</code>
+        <code>aria-controls</code>
+        <code>role=</code>
+        <code>hidden</code>
+        <code>data-*</code>
+        <code>&lt;script defer&gt;</code>
+      </div>
+    </section>
+
+    <!-- ===== CSS3 TECHNIQUES USED (Week 3) ===== -->
+    <section class="doc-section reveal" aria-labelledby="css3-title">
+      <h2 id="css3-title">CSS3 Techniques Used (Week 2–3)</h2>
+      <p>The following CSS3 features are applied across the project stylesheet:</p>
+      <div class="tag-cloud" aria-label="CSS3 techniques used">
+        <code>CSS Custom Properties (--var)</code>
+        <code>@import url() (Google Fonts)</code>
+        <code>CSS Grid</code>
+        <code>grid-template-areas</code>
+        <code>Flexbox</code>
+        <code>auto-fit minmax()</code>
+        <code>position: sticky</code>
+        <code>backdrop-filter: blur()</code>
+        <code>@keyframes animations</code>
+        <code>transform: rotateY()</code>
+        <code>transform-style: preserve-3d</code>
+        <code>backface-visibility: hidden</code>
+        <code>perspective</code>
+        <code>transition</code>
+        <code>box-shadow (neon glow)</code>
+        <code>text-shadow</code>
+        <code>filter: drop-shadow()</code>
+        <code>::before / ::after</code>
+        <code>clamp()</code>
+        <code>repeating-linear-gradient()</code>
+        <code>radial-gradient()</code>
+        <code>::-webkit-scrollbar</code>
+        <code>@media (max-width)</code>
+        <code>@media (prefers-reduced-motion)</code>
+        <code>IntersectionObserver (Scroll Reveal)</code>
+        <code>aria-expanded (hamburger nav)</code>
+        <code>scroll-behavior: smooth</code>
+        <code>:focus-visible</code>
+        <code>opacity + translateY (reveal)</code>
+        <code>cubic-bezier()</code>
+      </div>
+    </section>
+
+    <!-- ===== JAVASCRIPT TECHNIQUES USED (Week 4–5) ===== -->
+    <section class="doc-section reveal" aria-labelledby="js-title">
+      <h2 id="js-title">JavaScript Techniques Used (Week 4–5)</h2>
+      <p>The following JavaScript features and patterns are used in game.js and main.js:</p>
+      <div class="tag-cloud" aria-label="JavaScript techniques used">
+        <code>'use strict'</code>
+        <code>const / let</code>
+        <code>Array (deck)</code>
+        <code>Object literals (cards)</code>
+        <code>Fisher-Yates shuffle</code>
+        <code>Array.pop()</code>
+        <code>for...of loop</code>
+        <code>forEach()</code>
+        <code>Arrow functions</code>
+        <code>Template literals</code>
+        <code>Destructuring assignment</code>
+        <code>Default parameters</code>
+        <code>Optional chaining (?.)</code>
+        <code>switch statement</code>
+        <code>setTimeout() recursion</code>
+        <code>Math.floor() / Math.random()</code>
+        <code>Math.abs()</code>
+        <code>toLocaleString()</code>
+        <code>document.getElementById()</code>
+        <code>document.querySelector()</code>
+        <code>document.querySelectorAll()</code>
+        <code>createElement()</code>
+        <code>appendChild()</code>
+        <code>insertBefore()</code>
+        <code>classList.add/remove/toggle()</code>
+        <code>dataset.*</code>
+        <code>setAttribute()</code>
+        <code>addEventListener()</code>
+        <code>DOMContentLoaded event</code>
+        <code>keydown event</code>
+        <code>animationend event</code>
+        <code>IntersectionObserver</code>
+        <code>localStorage.getItem/setItem()</code>
+        <code>JSON.parse() / JSON.stringify()</code>
+        <code>Number() conversion</code>
+        <code>innerHTML / textContent</code>
+        <code>element.hidden</code>
+        <code>button.disabled</code>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT THE STUDENT ===== -->
+    <section class="doc-section reveal" aria-labelledby="student-title">
+      <h2 id="student-title">About This Project</h2>
+      <address>
+        <p>
+          <strong>Course:</strong> Web Development – Individual Project<br />
+          <strong>Project:</strong> Royal Blackjack – Browser-based 21 Card Game<br />
+          <strong>Stage:</strong> Week 5 Final Submission – Complete Project<br />
+          <strong>Technologies:</strong> HTML5, CSS3, JavaScript
+        </p>
+      </address>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-logo"><span>♠</span> Royal Blackjack</p>
+      <nav aria-label="Footer Navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Play</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; 2025 Royal Blackjack &mdash; Web Development Project, Week 1–5</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
